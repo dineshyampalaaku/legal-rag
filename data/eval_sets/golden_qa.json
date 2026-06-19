@@ -1,0 +1,77 @@
+[
+{
+"question": "What offence is defined under Section 138 of the Negotiable Instruments Act?",
+"ground_truth": "Dishonour of a cheque due to insufficiency of funds or exceeding the arranged amount.",
+"expected_source_case_id": "dashrath_rathod"
+},
+{
+"question": "What are the essential conditions required to constitute an offence under Section 138?",
+"ground_truth": "A cheque must be issued towards a legally enforceable debt or liability, dishonoured by the bank, followed by statutory notice and non-payment within the prescribed period.",
+"expected_source_case_id": "dashrath_rathod"
+},
+{
+"question": "Can proceedings under IPC and Section 138 of the NI Act coexist?",
+"ground_truth": "Yes. Section 138 does not make IPC provisions redundant and both may operate independently.",
+"expected_source_case_id": "dashrath_rathod"
+},
+{
+"question": "What presumption arises under Section 139 of the Negotiable Instruments Act?",
+"ground_truth": "A presumption that the cheque was issued towards discharge of a debt or liability unless rebutted.",
+"expected_source_case_id": "rangappa"
+},
+{
+"question": "Is the presumption under Section 139 rebuttable?",
+"ground_truth": "Yes. The accused may rebut it through evidence or circumstances creating reasonable doubt.",
+"expected_source_case_id": "rangappa"
+},
+{
+"question": "What standard of proof is required for an accused to rebut the statutory presumption under Section 139?",
+"ground_truth": "Preponderance of probabilities rather than proof beyond reasonable doubt.",
+"expected_source_case_id": "rangappa"
+},
+{
+"question": "Can the accused rely on materials produced by the complainant to rebut the presumption?",
+"ground_truth": "Yes. Rebuttal may arise from evidence presented by the complainant or surrounding circumstances.",
+"expected_source_case_id": "rangappa"
+},
+{
+"question": "What issue was considered in the Bir Singh case regarding blank signed cheques?",
+"ground_truth": "Whether a voluntarily signed blank cheque can attract liability under Section 138.",
+"expected_source_case_id": "bir_singh"
+},
+{
+"question": "Does filling details in a signed blank cheque invalidate it?",
+"ground_truth": "No. A voluntarily signed blank cheque may remain valid even if details are subsequently filled.",
+"expected_source_case_id": "bir_singh"
+},
+{
+"question": "Can a signed cheque handed over by the drawer create legal liability even if particulars were filled later?",
+"ground_truth": "Yes, subject to surrounding facts and statutory presumptions.",
+"expected_source_case_id": "bir_singh"
+},
+{
+"question": "What was the principal legal issue discussed in Dashrath Rupsingh Rathod?",
+"ground_truth": "Territorial jurisdiction in complaints under Section 138 of the NI Act.",
+"expected_source_case_id": "dashrath_rathod"
+},
+{
+"question": "Which court has jurisdiction to try a complaint under Section 138 according to Dashrath Rupsingh Rathod?",
+"ground_truth": "The court having jurisdiction over the branch of the drawee bank where the cheque is dishonoured.",
+"expected_source_case_id": "dashrath_rathod"
+},
+{
+"question": "What role does dishonour of the cheque play in determining jurisdiction?",
+"ground_truth": "Dishonour by the drawee bank is a critical jurisdictional event.",
+"expected_source_case_id": "dashrath_rathod"
+},
+{
+"question": "What issue relating to company liability is discussed in Hiten Dalal?",
+"ground_truth": "Operation of statutory presumptions and evidentiary burden in cheque dishonour cases.",
+"expected_source_case_id": "hiten_dalal"
+},
+{
+"question": "What is the significance of statutory presumptions in cheque dishonour prosecutions?",
+"ground_truth": "They shift the evidentiary burden onto the accused until rebutted.",
+"expected_source_case_id": "hiten_dalal"
+}
+]
