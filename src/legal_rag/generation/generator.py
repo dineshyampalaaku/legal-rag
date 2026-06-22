@@ -38,9 +38,13 @@ Question:
 Answer:
 """
 
-    response = client.models.generate_content(
+    try:
+      response = client.models.generate_content(
         model="gemini-2.5-flash",
         contents=prompt
-    )
+      )
 
-    return response.text
+      return response.text
+
+    except Exception as e:
+      return f"Model temporarily unavailable: {str(e)}"
