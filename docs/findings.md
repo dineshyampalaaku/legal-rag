@@ -38,3 +38,30 @@ Conclusion:
 
 Not a pure retrieval failure.
 Potential question-design issue.
+
+## Evaluation Methodology
+
+A golden QA dataset of 20 legal questions was created
+before evaluation.
+
+Retrieval quality was measured using Recall@k.
+
+Generation quality was manually reviewed against
+ground truth answers.
+
+Observed failure:
+
+Question:
+"What issue relating to company liability is discussed in Hiten Dalal?"
+
+Finding:
+Retriever successfully returned Hiten Dalal chunks
+in top results.
+
+Root Cause:
+Failure originated from chunk granularity / context
+selection rather than retrieval ranking.
+
+Future Work:
+Integrate RAGAS once ecosystem compatibility
+issues are resolved.
