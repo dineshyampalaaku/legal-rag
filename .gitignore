@@ -1,27 +1,31 @@
-# Python-generated files
-__pycache__/
-*.py[oc]
-build/
-dist/
-wheels/
-*.egg-info
-
 # Virtual environments
 .venv/
+.venv-ragas/
+.venv-eval/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
 
 # Environment variables
 .env
 
-# Vector DB
+# ChromaDB
 data/chroma/
 
-# Cache
-.pytest_cache/
-__pycache__/
-
-# VS Code
+# IDE
 .vscode/
+.idea/
 
-# OS files
+# Logs
+*.log
+
+# Build
+dist/
+build/
+
+# OS
 .DS_Store
 Thumbs.db
