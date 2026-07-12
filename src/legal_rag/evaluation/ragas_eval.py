@@ -26,10 +26,7 @@ embeddings = LangchainEmbeddingsWrapper(
 )
 from ragas import evaluate
 from ragas.metrics import (
-    context_precision,
-    context_recall,
-    faithfulness,
-    answer_relevancy,
+    context_precision
 )
 
 from legal_rag.retrieval.retriever import retrieve
@@ -45,7 +42,7 @@ def build_dataset():
     ) as f:
         golden_set = json.load(f)
 
-    rows = []
+    rows = [] 
 
     for item in golden_set[:1]:
 
@@ -90,15 +87,10 @@ def main():
     print("\nFIRST ROW:")
     print(dataset[0])
 
-    return
-
     result = evaluate(
        dataset=dataset,
        metrics=[
-        context_precision,
-        context_recall,
-        faithfulness,
-        answer_relevancy,
+        context_precision
       ],
       llm=llm,
       embeddings=embeddings,

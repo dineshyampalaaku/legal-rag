@@ -18,6 +18,13 @@ def root():
     return {
         "message": "Legal RAG API running"
     }
+@app.get("/health")
+def health():
+    return {
+        "status": "healthy",
+        "service": "Legal RAG API",
+        "version": "1.0.0",
+    }
 
 
 @app.post("/ask")

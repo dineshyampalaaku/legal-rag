@@ -10,7 +10,8 @@ def main():
         golden_set = json.load(f)
 
     rows = []
-
+    ragas_rows = []
+    
     print("=" * 80)
     print("ANSWER EVALUATION")
     print("=" * 80)
@@ -26,14 +27,21 @@ def main():
           retrieval_result = retrieve(question, top_k=5)
 
           chunk_ids = retrieval_result["ids"][0]
+          contexts = retrieval_result["documents"][0]
 
-          context = "\n\n".join(
-            retrieval_result["documents"][0]
-          )
+          context = "\n\n".join(contexts)
 
           answer = generate_answer(
             question=question,
             context=context
+          )
+          ragas_rows.append(
+            {
+               "user_input": question,
+               "reference": ground_truth,
+               "retrieved_contexts": contexts,
+               "response": answer,
+            }
           )
 
           time.sleep(15)
@@ -72,6 +80,17 @@ def main():
 
     print("\nDone!")
     print("Saved: data/eval_sets/answer_evaluation.csv")
+    with open(
+        "data/eval_sets/golden_qa_with_answers.json",
+        "w",
+        encoding="utf-8",
+    ) as f:
+        json.dump(
+           ragas_rows,
+           f,
+           indent=2,
+           ensure_ascii=False,
+        )
 
 
 if __name__ == "__main__":

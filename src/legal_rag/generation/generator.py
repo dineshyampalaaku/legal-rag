@@ -1,3 +1,4 @@
+import time
 from langsmith import traceable
 from google import genai
 
@@ -38,13 +39,30 @@ Question:
 Answer:
 """
 
-    try:
-      response = client.models.generate_content(
-        model="gemini-2.5-flash",
-        contents=prompt
-      )
+    for attempt in range(3):
 
-      return response.text
+     try:
+        response = client.models.generate_content(
+            model="gemini-2.5-flash-lite",
+            contents=prompt
+        )
 
-    except Exception as e:
-      return f"Model temporarily unavailable: {str(e)}"
+        return response.text
+
+     except Exception as e:
+
+        print(f"[Generator] Attempt {attempt + 1}/3 failed.")
+
+        print(e)
+
+        if attempt < 2:
+
+            wait_time = 2 ** attempt
+
+            print(f"[Generator] Retrying in {wait_time} seconds...")
+
+            time.sleep(wait_time)
+
+        else:
+
+            return f"Model temporarily unavailable: {str(e)}"

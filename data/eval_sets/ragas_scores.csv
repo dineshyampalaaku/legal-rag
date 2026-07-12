@@ -1,0 +1,4 @@
+question,context_precision,context_recall,faithfulness,answer_relevancy,git_sha,timestamp
+What offence is defined under Section 138 of the Negotiable Instruments Act?,,1.0,1.0,0.9224870383689389,8322b89,2026-07-02T13:34:13.332436
+What are the essential conditions required to constitute an offence under Section 138?,,1.0,1.0,,8322b89,2026-07-02T13:35:24.128861
+Can proceedings under IPC and Section 138 of the NI Act coexist?,,,,,8322b89,2026-07-02T13:35:58.013834
