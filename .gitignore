@@ -13,7 +13,7 @@ __pycache__/
 .env
 
 # ChromaDB
-data/chroma/
+#data/chroma/
 
 # IDE
 .vscode/
