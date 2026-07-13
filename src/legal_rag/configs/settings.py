@@ -24,7 +24,7 @@ class Settings(BaseSettings):
     retrieval_top_k: int = 5
 
     # Observability
-    langsmith_api_key: str = Field(..., env="LANGSMITH_API_KEY")
+    langsmith_api_key: str | None = Field(default=None, env="LANGSMITH_API_KEY")
     langsmith_project: str = "legal-rag-prod"
 
     # Eval
