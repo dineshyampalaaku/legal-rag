@@ -1,7 +1,12 @@
 import requests
 import streamlit as st
 
-API_URL = "http://127.0.0.1:8000/ask"
+import os
+
+API_URL = os.getenv(
+    "API_URL",
+    "http://127.0.0.1:8000/ask"
+)
 
 st.set_page_config(
     page_title="LexInsight AI",
@@ -39,8 +44,9 @@ st.markdown("---")
 st.subheader("Ask a Legal Question")
 
 question = st.text_area(
-    "",
+    "Legal Question",
     placeholder="Example: What offence is defined under Section 138 of the Negotiable Instruments Act?",
+    label_visibility="collapsed",
     height=140,
 )
 
